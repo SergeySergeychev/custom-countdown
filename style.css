@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  /* overflow-y: hidden; */
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+}
+
+/* Video Background */
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: auto;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  min-width: 580px;
+  min-height: 304px;
+  color: #000;
+  margin: 0 auto;
+  padding: 25px 50px;
+  border-radius: 5px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.input-continer {
+  position: relative;
+  top: 20px;
+}
+
+h1 {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Form */
+.form {
+  width: 480px;
+}
+
+label {
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+input {
+  width: 95%;
+  padding: 10px;
+  font-family: "Nunito", sans-serif;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  margin-bottom: 25px;
+}
+
+button {
+  width: 96%;
+  padding: 13px;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  background: #006959;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+/* Countdown */
+ul {
+  margin-left: -45px;
+}
+
+li {
+  display: inline-block;
+  font-size: 30px;
+  list-style-type: none;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 80px;
+  text-align: center;
+}
+
+/* Complete */
+.complete {
+  position: relative;
+  top: 60px;
+}
+
+.complete-title {
+  animation: complete 4s infinite;
+}
+
+@keyframes complete {
+  0% {
+    color: rgb(233, 12, 12);
+  }
+
+  25% {
+    color: rgb(214, 193, 0);
+  }
+
+  50% {
+    color: rgb(68, 231, 19);
+    transform: scale(1.5);
+  }
+
+  75% {
+    color: rgb(19, 79, 209);
+  }
+
+  100% {
+    color: rgb(188, 16, 211);
+  }
+}
+
+/* Media Query: Large Smarthphone (Vertical) */
+@media screen and (max-width: 700px) {
+  .video-background {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  video {
+    object-fit: cover;
+    object-position: 70%;
+    margin-top: -1px;
+  }
+
+  .container {
+    min-width: 95vw;
+    min-height: 245px;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .input-continer {
+    top: unset;
+  }
+
+  .countdown {
+    position: relative;
+    top: 10px;
+  }
+
+  .form {
+    width: unset;
+  }
+
+  input {
+    width: 93%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  li {
+    font-size: 15px;
+  }
+
+  li span {
+    font-size: 40px;
+  }
+}
